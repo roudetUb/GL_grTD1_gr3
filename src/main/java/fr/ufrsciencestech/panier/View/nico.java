@@ -10,6 +10,6 @@ package fr.ufrsciencestech.panier.View;
  *
  * @author am251332
  */
-public class VueAvance {
+public class nico {
     
 }
