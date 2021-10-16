@@ -1,12 +1,7 @@
-/**
- *
- * @author roudet
- */
 package fr.ufrsciencestech.panier.Model;
 
-public class Ananas extends FruitSimple implements Fruit{
-
-    public Ananas(double prix, String origine)
+public class Banane extends FruitSimple implements Fruit{
+    public Banane(double prix, String origine)
     {
         super();
         if(prix < 0)
@@ -15,7 +10,7 @@ public class Ananas extends FruitSimple implements Fruit{
             super.prix = prix;
 
         if(origine.equals(""))
-            super.origine = "Finlande";  //Finlande par défaut
+            super.origine = "Portugal";  //Portugal par défaut
         else
             super.origine = origine;
     }
@@ -33,6 +28,6 @@ public class Ananas extends FruitSimple implements Fruit{
     }
 
     public String toString(){
-        return "Ananas de " + origine + " coutant " + prix + " euros";
+        return "Banane de " + origine + " coutant " + prix + " euros";
     }
 }

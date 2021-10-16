@@ -80,7 +80,7 @@ public class PanierTest {
 
 /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testAjoutValideMock() throws PanierPleinException {
@@ -96,7 +96,7 @@ public class PanierTest {
     
     /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test(expected=PanierPleinException.class)
     public void testAjoutInvalideMock() throws PanierPleinException {
@@ -108,7 +108,7 @@ public class PanierTest {
     
     /**
      * Test of getPrice method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testGetPrix() throws PanierPleinException {
@@ -140,7 +140,7 @@ public class PanierTest {
 
     /**
      * Test of getTaille method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testGetTaille() throws PanierPleinException {
@@ -170,7 +170,7 @@ public class PanierTest {
     
     /**
      * Test of getOranges method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testGetOranges() throws PanierPleinException {
@@ -186,16 +186,18 @@ public class PanierTest {
         assertEquals(expResult, result3);
         
         //test dans un panier plein
-        Fruit expResult4 = new Orange();
+        Fruit expResult4 = new Orange(1.5,"Suede");
         Fruit result4 = p2plein.getFruits(0);
         Fruit result5 = p2plein.getFruits(1);
+        System.out.println(expResult + " :: " + result4);
+        System.out.println(expResult + " :: " + result5);
         assertEquals(expResult4, result4);
         assertEquals(expResult4, result5);
     }
     
     /**
      * Test of getContMax method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testGetContMax() throws PanierPleinException {
@@ -232,7 +234,7 @@ public class PanierTest {
 
     /**
      * Test of estVide method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testEstVide() throws PanierPleinException {
@@ -258,7 +260,7 @@ public class PanierTest {
 
     /**
      * Test of estPlein method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testEstPlein() throws PanierPleinException {
@@ -284,7 +286,7 @@ public class PanierTest {
 
     /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testAjoutValide_0args() throws PanierPleinException {
@@ -313,7 +315,7 @@ public class PanierTest {
     
     /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test(expected=PanierPleinException.class)
     public void testAjoutInvalide_0args() throws PanierPleinException {
@@ -325,7 +327,7 @@ public class PanierTest {
 
     /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testAjoutValide_Orange() throws PanierPleinException {
@@ -351,7 +353,7 @@ public class PanierTest {
     
     /**
      * Test of ajoute method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test(expected=PanierPleinException.class)
     public void testAjoutInvalide_Orange() throws PanierPleinException {
@@ -362,8 +364,8 @@ public class PanierTest {
 
     /**
      * Test of retire method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierVideException
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierVideException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testRemoveValide() throws PanierVideException, PanierPleinException {
@@ -385,7 +387,7 @@ public class PanierTest {
     
     /**
      * Test of retire method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierVideException
+     * @throws //fr.ufrsciencestech.panier.PanierVideException
      */
     @Test(expected=PanierVideException.class)
     public void testRemoveInvalide() throws PanierVideException {
@@ -395,7 +397,7 @@ public class PanierTest {
 
     /**
      * Test of boycotteOrigine method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testBoycotteOrigine() throws PanierPleinException {
@@ -460,7 +462,7 @@ public class PanierTest {
 
     /**
      * Test of toString method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testToString() throws PanierPleinException {
@@ -487,8 +489,8 @@ public class PanierTest {
 
     /**
      * Test of equals method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
-     * @throws fr.ufrsciencestech.panier.PanierVideException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierVideException
      */
     @Test
     public void testEquals() throws PanierPleinException, PanierVideException {
@@ -544,7 +546,7 @@ public class PanierTest {
     
      /**
      * Test of nbFruits method, of class Panier.
-     * @throws fr.ufrsciencestech.panier.PanierPleinException
+     * @throws //fr.ufrsciencestech.panier.PanierPleinException
      */
     @Test
     public void testNbFruits() throws PanierPleinException{

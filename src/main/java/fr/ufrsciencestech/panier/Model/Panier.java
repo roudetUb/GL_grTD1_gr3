@@ -74,7 +74,7 @@ public class Panier extends Observable {
             if(!estVide())
                 o = getFruits().get(getFruits().size()-1);
             else
-                o = new Orange();
+                o = new Orange(1.50,"Suede");
             getFruits().add(o);
             setChanged();
             notifyObservers();

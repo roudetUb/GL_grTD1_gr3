@@ -89,9 +89,10 @@ public class AnanasTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        Ananas instance = new Ananas();
-        String expResult = "Ananas de Cameroun coutant 0.5 euros";
+        Ananas instance = new Ananas(0.5,"");
+        String expResult = "Ananas de Finlande coutant 0.5 euros";
         String result = instance.toString();
+        System.out.println(expResult + " :: " + result);
         assertEquals(expResult, result);
     }
 
@@ -101,7 +102,7 @@ public class AnanasTest {
     @Test
     public void testIsSeedless() {
         System.out.println("isSeedless");
-        Ananas instance = new Ananas();
+        Ananas instance = new Ananas(1.0,"");
         boolean expResult = true;
         boolean result = instance.isSeedless();
         assertEquals(expResult, result);
