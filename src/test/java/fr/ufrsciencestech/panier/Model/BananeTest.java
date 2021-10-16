@@ -1,22 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fr.ufrsciencestech.panier.Model;
 
-import fr.ufrsciencestech.panier.Model.Orange;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- *
- * @author roudet
- */
-public class OrangeTest {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+public class BananeTest {
     /**
      *
      */
@@ -27,17 +17,17 @@ public class OrangeTest {
     @Test
     public void testPrixNegatif() {
         System.out.println("prix negatif");
-        Orange instance = new Orange(-1.0,"Espagne");
+        Banane instance = new Banane(-1.0,"Portugal");
         double expResult = 1.0;
         double result = instance.getPrix();
         assertTrue(expResult == result);
     }
-    
+
     @Test
     public void testChaineVide() {
         System.out.println("chaine vide");
-        Orange instance = new Orange(1.0,"");
-        String expResult = "Espagne";
+        Banane instance = new Banane(1.0,"");
+        String expResult = "Portugal";
         String result = instance.getOrigine();
         assertEquals(expResult, result);
     }
@@ -48,8 +38,8 @@ public class OrangeTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        Orange instance = new Orange(0.5,"");
-        String expResult = "Orange de Espagne coutant 0.5 euros";
+        Banane instance = new Banane(0.5,"");
+        String expResult = "Banane de Portugal coutant 0.5 euros";
         String result = instance.toString();
         System.out.println(expResult + " :: " + result);
         assertEquals(expResult, result);
@@ -58,18 +48,18 @@ public class OrangeTest {
     @Test
     public void testGetOrigine() {
         System.out.println("getOrigine");
-        Orange instance = new Orange(1.0,"");
-        String expResult = "Espagne";
+        Banane instance = new Banane(1.0,"");
+        String expResult = "Portugal";
         String result = instance.getOrigine();
         assertEquals(expResult, result);
     }
-    
+
     @Test
     public void testSetCountry() {
         System.out.println("setOrigine");
-        Orange instance = new Orange(1.0,"");
-        String expResult = "France";
-        instance.setOrigine("France");
+        Banane instance = new Banane(1.0,"");
+        String expResult = "Chine";
+        instance.setOrigine("Chine");
         String result = instance.getOrigine();
         assertEquals(expResult, result);
     }
@@ -77,31 +67,31 @@ public class OrangeTest {
     @Test
     public void testGetPrix() {
         System.out.println("getPrix");
-        Orange instance = new Orange(2.0,"France");
+        Banane instance = new Banane(2.0,"Chine");
         double expResult = 2.0;
         double result = instance.getPrix();
         assertTrue(expResult == result);
     }
-    
+
     @Test
     public void testSetPrix() {
         System.out.println("setPrix");
-        Orange instance = new Orange(1.0,"");
+        Banane instance = new Banane(1.0,"");
         double expResult = 0.7;
         instance.setPrix(0.7);
         double result = instance.getPrix();
         assertTrue(expResult == result);
     }
-    
+
     /**
      * Test of isSeedless method, of class Orange.
      */
     @Test
     public void testIsSeedless() {
         System.out.println("isSeedless");
-        Orange instanceavecpepins = new Orange(1.0,"");
+        Banane instanceavecpepins = new Banane(1.0,"");
         boolean expResult1 = false;
         boolean result1 = instanceavecpepins.isSeedless();
-        assertTrue(expResult1 != result1);
+        assertTrue(result1 != expResult1);
     }
 }

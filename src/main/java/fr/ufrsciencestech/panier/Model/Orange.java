@@ -4,66 +4,34 @@ package fr.ufrsciencestech.panier.Model;
  *
  * @author roudet
  */
-public class Orange implements Fruit{
-    private double prix;
-    private String origine;
-	
-    public Orange() 
+public class Orange extends FruitSimple implements Fruit{
+    public Orange(double prix, String origine)
     {
-        this.prix = 0.5;  //prix en euros
-        this.origine="Espagne";
-    }
-    
-    public Orange(double prix, String origine) 
-    {
-	if(prix < 0)
-	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
-	else
-	    this.prix = prix;
+        super();
+        if(prix < 0)
+            super.prix = -prix;  //une solution possible pour interdire les prix negatifs
+        else
+            super.prix = prix;
 
-	if(origine.equals(""))
-            this.origine = "Espagne";  //Espagne par défaut
-	else
-            this.origine = origine;   
-    }
-
-    public double getPrix(){
-	return prix;
+        if(origine.equals(""))
+            super.origine = "Espagne";  //Espagne par défaut
+        else
+            super.origine = origine;
     }
 
     public void setPrix(double prix){
-	this.prix=prix;
+        super.prix=prix;
     }
 
-    public String getOrigine(){
-	return origine;
-    }
- 
     public void setOrigine(String origine){
-	this.origine=origine;
+        super.origine=origine;
     }
 
-    @Override
+    public boolean isSeedless() {  //predicat indiquant qu'un Ananas n'a pas de pepins
+        return true;
+    }
+
     public String toString(){
         return "Orange de " + origine + " coutant " + prix + " euros";
     }
-
-    @Override
-    public boolean equals(Object o){  //predicat pour tester si 2 oranges sont equivalentes
-        if(o != null && getClass() == o.getClass()){
-            Orange or = (Orange) o;
-            return (prix == or.prix && origine.equals(or.origine));
-        }
-        return false;
-    }
-
-    public boolean isSeedless() {  //predicat indiquant qu'une orange a des pepins
-        return false;
-    }
-
-
-    /*public static void main (String[] args){
-        //Ecrire ici vos tests
-	//System.out.println("premier test Orange");
-   }*/
 }
